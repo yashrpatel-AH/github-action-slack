@@ -1,4 +1,11 @@
 - name: Send GitHub Action trigger data to Slack workflow
+
+on:
+  push:
+    branches:
+      - main
+      - github_actions
+      
   id: slack
   uses: slackapi/slack-github-action@v1.21.0
   env:
